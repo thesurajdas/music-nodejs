@@ -5,7 +5,7 @@ import { validateUserAccessToken } from '@middleware/index';
 const userRouter = Router();
 
 userRouter.get('/me', validateUserAccessToken, userController.getCurrentUser);
-userRouter.put('/:id/preferences', validateUserAccessToken);
+userRouter.get('/:id/preferences', validateUserAccessToken, );
 
 
 export { userRouter };
